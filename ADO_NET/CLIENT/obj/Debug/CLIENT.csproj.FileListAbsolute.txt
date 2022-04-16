@@ -1,0 +1,8 @@
+E:\dev\ADONET\ADO_NET\CLIENT\bin\Debug\CLIENT.exe.config
+E:\dev\ADONET\ADO_NET\CLIENT\bin\Debug\CLIENT.exe
+E:\dev\ADONET\ADO_NET\CLIENT\bin\Debug\CLIENT.pdb
+E:\dev\ADONET\ADO_NET\CLIENT\obj\Debug\CLIENT.csproj.AssemblyReference.cache
+E:\dev\ADONET\ADO_NET\CLIENT\obj\Debug\CLIENT.csproj.SuggestedBindingRedirects.cache
+E:\dev\ADONET\ADO_NET\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
+E:\dev\ADONET\ADO_NET\CLIENT\obj\Debug\CLIENT.exe
+E:\dev\ADONET\ADO_NET\CLIENT\obj\Debug\CLIENT.pdb

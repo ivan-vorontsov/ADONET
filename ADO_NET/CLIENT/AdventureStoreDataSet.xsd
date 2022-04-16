@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdventureStoreDataSet" targetNamespace="http://tempuri.org/AdventureStoreDataSet.xsd" xmlns:mstns="http://tempuri.org/AdventureStoreDataSet.xsd" xmlns="http://tempuri.org/AdventureStoreDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AdventureWorksDW2019ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AdventureWorksDW2019ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CLIENT.Properties.Settings.GlobalReference.Default.AdventureWorksDW2019ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DimProductTableAdapter" GeneratorDataComponentClassName="DimProductTableAdapter" Name="DimProduct" UserDataComponentName="DimProductTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AdventureWorksDW2019ConnectionString (Settings)" DbObjectName="AdventureWorksDW2019.dbo.DimProduct" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[DimProduct] WHERE (([ProductKey] = @Original_ProductKey) AND ((@IsNull_ProductAlternateKey = 1 AND [ProductAlternateKey] IS NULL) OR ([ProductAlternateKey] = @Original_ProductAlternateKey)) AND ((@IsNull_ProductSubcategoryKey = 1 AND [ProductSubcategoryKey] IS NULL) OR ([ProductSubcategoryKey] = @Original_ProductSubcategoryKey)) AND ((@IsNull_WeightUnitMeasureCode = 1 AND [WeightUnitMeasureCode] IS NULL) OR ([WeightUnitMeasureCode] = @Original_WeightUnitMeasureCode)) AND ((@IsNull_SizeUnitMeasureCode = 1 AND [SizeUnitMeasureCode] IS NULL) OR ([SizeUnitMeasureCode] = @Original_SizeUnitMeasureCode)) AND ([EnglishProductName] = @Original_EnglishProductName) AND ([SpanishProductName] = @Original_SpanishProductName) AND ([FrenchProductName] = @Original_FrenchProductName) AND ((@IsNull_StandardCost = 1 AND [StandardCost] IS NULL) OR ([StandardCost] = @Original_StandardCost)) AND ([FinishedGoodsFlag] = @Original_FinishedGoodsFlag) AND ([Color] = @Original_Color) AND ((@IsNull_SafetyStockLevel = 1 AND [SafetyStockLevel] IS NULL) OR ([SafetyStockLevel] = @Original_SafetyStockLevel)) AND ((@IsNull_ReorderPoint = 1 AND [ReorderPoint] IS NULL) OR ([ReorderPoint] = @Original_ReorderPoint)) AND ((@IsNull_ListPrice = 1 AND [ListPrice] IS NULL) OR ([ListPrice] = @Original_ListPrice)) AND ((@IsNull_Size = 1 AND [Size] IS NULL) OR ([Size] = @Original_Size)) AND ((@IsNull_SizeRange = 1 AND [SizeRange] IS NULL) OR ([SizeRange] = @Original_SizeRange)) AND ((@IsNull_Weight = 1 AND [Weight] IS NULL) OR ([Weight] = @Original_Weight)) AND ((@IsNull_DaysToManufacture = 1 AND [DaysToManufacture] IS NULL) OR ([DaysToManufacture] = @Original_DaysToManufacture)) AND ((@IsNull_ProductLine = 1 AND [ProductLine] IS NULL) OR ([ProductLine] = @Original_ProductLine)) AND ((@IsNull_DealerPrice = 1 AND [DealerPrice] IS NULL) OR ([DealerPrice] = @Original_DealerPrice)) AND ((@IsNull_Class = 1 AND [Class] IS NULL) OR ([Class] = @Original_Class)) AND ((@IsNull_Style = 1 AND [Style] IS NULL) OR ([Style] = @Original_Style)) AND ((@IsNull_ModelName = 1 AND [ModelName] IS NULL) OR ([ModelName] = @Original_ModelName)) AND ((@IsNull_EnglishDescription = 1 AND [EnglishDescription] IS NULL) OR ([EnglishDescription] = @Original_EnglishDescription)) AND ((@IsNull_FrenchDescription = 1 AND [FrenchDescription] IS NULL) OR ([FrenchDescription] = @Original_FrenchDescription)) AND ((@IsNull_ChineseDescription = 1 AND [ChineseDescription] IS NULL) OR ([ChineseDescription] = @Original_ChineseDescription)) AND ((@IsNull_ArabicDescription = 1 AND [ArabicDescription] IS NULL) OR ([ArabicDescription] = @Original_ArabicDescription)) AND ((@IsNull_HebrewDescription = 1 AND [HebrewDescription] IS NULL) OR ([HebrewDescription] = @Original_HebrewDescription)) AND ((@IsNull_ThaiDescription = 1 AND [ThaiDescription] IS NULL) OR ([ThaiDescription] = @Original_ThaiDescription)) AND ((@IsNull_GermanDescription = 1 AND [GermanDescription] IS NULL) OR ([GermanDescription] = @Original_GermanDescription)) AND ((@IsNull_JapaneseDescription = 1 AND [JapaneseDescription] IS NULL) OR ([JapaneseDescription] = @Original_JapaneseDescription)) AND ((@IsNull_TurkishDescription = 1 AND [TurkishDescription] IS NULL) OR ([TurkishDescription] = @Original_TurkishDescription)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ProductAlternateKey" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProductAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WeightUnitMeasureCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WeightUnitMeasureCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_WeightUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="WeightUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SizeUnitMeasureCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SizeUnitMeasureCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_SizeUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="SizeUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SpanishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StandardCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StandardCost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_StandardCost" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="StandardCost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_FinishedGoodsFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="FinishedGoodsFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Color" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SafetyStockLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyStockLevel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_SafetyStockLevel" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="SafetyStockLevel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderPoint" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderPoint" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_ReorderPoint" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="ReorderPoint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ListPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ListPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_ListPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ListPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Size" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Size" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SizeRange" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SizeRange" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SizeRange" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SizeRange" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Weight" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Weight" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DaysToManufacture" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysToManufacture" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DaysToManufacture" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysToManufacture" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductLine" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductLine" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_ProductLine" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ProductLine" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DealerPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DealerPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_DealerPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DealerPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Class" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Class" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Class" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Class" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Style" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Style" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Style" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Style" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModelName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModelName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ModelName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModelName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EnglishDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EnglishDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FrenchDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FrenchDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChineseDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChineseDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChineseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChineseDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArabicDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArabicDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArabicDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArabicDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HebrewDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HebrewDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HebrewDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HebrewDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ThaiDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThaiDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ThaiDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ThaiDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GermanDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GermanDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GermanDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GermanDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_JapaneseDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="JapaneseDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_JapaneseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="JapaneseDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TurkishDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TurkishDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TurkishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TurkishDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StartDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EndDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[DimProduct] ([ProductAlternateKey], [ProductSubcategoryKey], [WeightUnitMeasureCode], [SizeUnitMeasureCode], [EnglishProductName], [SpanishProductName], [FrenchProductName], [StandardCost], [FinishedGoodsFlag], [Color], [SafetyStockLevel], [ReorderPoint], [ListPrice], [Size], [SizeRange], [Weight], [DaysToManufacture], [ProductLine], [DealerPrice], [Class], [Style], [ModelName], [LargePhoto], [EnglishDescription], [FrenchDescription], [ChineseDescription], [ArabicDescription], [HebrewDescription], [ThaiDescription], [GermanDescription], [JapaneseDescription], [TurkishDescription], [StartDate], [EndDate], [Status]) VALUES (@ProductAlternateKey, @ProductSubcategoryKey, @WeightUnitMeasureCode, @SizeUnitMeasureCode, @EnglishProductName, @SpanishProductName, @FrenchProductName, @StandardCost, @FinishedGoodsFlag, @Color, @SafetyStockLevel, @ReorderPoint, @ListPrice, @Size, @SizeRange, @Weight, @DaysToManufacture, @ProductLine, @DealerPrice, @Class, @Style, @ModelName, @LargePhoto, @EnglishDescription, @FrenchDescription, @ChineseDescription, @ArabicDescription, @HebrewDescription, @ThaiDescription, @GermanDescription, @JapaneseDescription, @TurkishDescription, @StartDate, @EndDate, @Status);
+SELECT ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode, SizeUnitMeasureCode, EnglishProductName, SpanishProductName, FrenchProductName, StandardCost, FinishedGoodsFlag, Color, SafetyStockLevel, ReorderPoint, ListPrice, Size, SizeRange, Weight, DaysToManufacture, ProductLine, DealerPrice, Class, Style, ModelName, LargePhoto, EnglishDescription, FrenchDescription, ChineseDescription, ArabicDescription, HebrewDescription, ThaiDescription, GermanDescription, JapaneseDescription, TurkishDescription, StartDate, EndDate, Status FROM DimProduct WHERE (ProductKey = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ProductAlternateKey" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProductAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@WeightUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="WeightUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@SizeUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="SizeUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SpanishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@StandardCost" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="StandardCost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@FinishedGoodsFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="FinishedGoodsFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Color" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@SafetyStockLevel" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="SafetyStockLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@ReorderPoint" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="ReorderPoint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@ListPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ListPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Size" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SizeRange" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SizeRange" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Weight" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DaysToManufacture" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysToManufacture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@ProductLine" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ProductLine" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@DealerPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DealerPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Class" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Class" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Style" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Style" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ModelName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModelName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@LargePhoto" Precision="0" ProviderType="VarBinary" Scale="0" Size="0" SourceColumn="LargePhoto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChineseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChineseDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArabicDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArabicDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HebrewDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HebrewDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ThaiDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ThaiDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GermanDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GermanDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@JapaneseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="JapaneseDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TurkishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TurkishDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode, SizeUnitMeasureCode, EnglishProductName, SpanishProductName, FrenchProductName, StandardCost, FinishedGoodsFlag, Color, SafetyStockLevel, ReorderPoint, ListPrice, Size, SizeRange, Weight, DaysToManufacture, ProductLine, DealerPrice, Class, Style, ModelName, LargePhoto, EnglishDescription, FrenchDescription, ChineseDescription, ArabicDescription, HebrewDescription, ThaiDescription, GermanDescription, JapaneseDescription, TurkishDescription, StartDate, EndDate, Status FROM dbo.DimProduct</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[DimProduct] SET [ProductAlternateKey] = @ProductAlternateKey, [ProductSubcategoryKey] = @ProductSubcategoryKey, [WeightUnitMeasureCode] = @WeightUnitMeasureCode, [SizeUnitMeasureCode] = @SizeUnitMeasureCode, [EnglishProductName] = @EnglishProductName, [SpanishProductName] = @SpanishProductName, [FrenchProductName] = @FrenchProductName, [StandardCost] = @StandardCost, [FinishedGoodsFlag] = @FinishedGoodsFlag, [Color] = @Color, [SafetyStockLevel] = @SafetyStockLevel, [ReorderPoint] = @ReorderPoint, [ListPrice] = @ListPrice, [Size] = @Size, [SizeRange] = @SizeRange, [Weight] = @Weight, [DaysToManufacture] = @DaysToManufacture, [ProductLine] = @ProductLine, [DealerPrice] = @DealerPrice, [Class] = @Class, [Style] = @Style, [ModelName] = @ModelName, [LargePhoto] = @LargePhoto, [EnglishDescription] = @EnglishDescription, [FrenchDescription] = @FrenchDescription, [ChineseDescription] = @ChineseDescription, [ArabicDescription] = @ArabicDescription, [HebrewDescription] = @HebrewDescription, [ThaiDescription] = @ThaiDescription, [GermanDescription] = @GermanDescription, [JapaneseDescription] = @JapaneseDescription, [TurkishDescription] = @TurkishDescription, [StartDate] = @StartDate, [EndDate] = @EndDate, [Status] = @Status WHERE (([ProductKey] = @Original_ProductKey) AND ((@IsNull_ProductAlternateKey = 1 AND [ProductAlternateKey] IS NULL) OR ([ProductAlternateKey] = @Original_ProductAlternateKey)) AND ((@IsNull_ProductSubcategoryKey = 1 AND [ProductSubcategoryKey] IS NULL) OR ([ProductSubcategoryKey] = @Original_ProductSubcategoryKey)) AND ((@IsNull_WeightUnitMeasureCode = 1 AND [WeightUnitMeasureCode] IS NULL) OR ([WeightUnitMeasureCode] = @Original_WeightUnitMeasureCode)) AND ((@IsNull_SizeUnitMeasureCode = 1 AND [SizeUnitMeasureCode] IS NULL) OR ([SizeUnitMeasureCode] = @Original_SizeUnitMeasureCode)) AND ([EnglishProductName] = @Original_EnglishProductName) AND ([SpanishProductName] = @Original_SpanishProductName) AND ([FrenchProductName] = @Original_FrenchProductName) AND ((@IsNull_StandardCost = 1 AND [StandardCost] IS NULL) OR ([StandardCost] = @Original_StandardCost)) AND ([FinishedGoodsFlag] = @Original_FinishedGoodsFlag) AND ([Color] = @Original_Color) AND ((@IsNull_SafetyStockLevel = 1 AND [SafetyStockLevel] IS NULL) OR ([SafetyStockLevel] = @Original_SafetyStockLevel)) AND ((@IsNull_ReorderPoint = 1 AND [ReorderPoint] IS NULL) OR ([ReorderPoint] = @Original_ReorderPoint)) AND ((@IsNull_ListPrice = 1 AND [ListPrice] IS NULL) OR ([ListPrice] = @Original_ListPrice)) AND ((@IsNull_Size = 1 AND [Size] IS NULL) OR ([Size] = @Original_Size)) AND ((@IsNull_SizeRange = 1 AND [SizeRange] IS NULL) OR ([SizeRange] = @Original_SizeRange)) AND ((@IsNull_Weight = 1 AND [Weight] IS NULL) OR ([Weight] = @Original_Weight)) AND ((@IsNull_DaysToManufacture = 1 AND [DaysToManufacture] IS NULL) OR ([DaysToManufacture] = @Original_DaysToManufacture)) AND ((@IsNull_ProductLine = 1 AND [ProductLine] IS NULL) OR ([ProductLine] = @Original_ProductLine)) AND ((@IsNull_DealerPrice = 1 AND [DealerPrice] IS NULL) OR ([DealerPrice] = @Original_DealerPrice)) AND ((@IsNull_Class = 1 AND [Class] IS NULL) OR ([Class] = @Original_Class)) AND ((@IsNull_Style = 1 AND [Style] IS NULL) OR ([Style] = @Original_Style)) AND ((@IsNull_ModelName = 1 AND [ModelName] IS NULL) OR ([ModelName] = @Original_ModelName)) AND ((@IsNull_EnglishDescription = 1 AND [EnglishDescription] IS NULL) OR ([EnglishDescription] = @Original_EnglishDescription)) AND ((@IsNull_FrenchDescription = 1 AND [FrenchDescription] IS NULL) OR ([FrenchDescription] = @Original_FrenchDescription)) AND ((@IsNull_ChineseDescription = 1 AND [ChineseDescription] IS NULL) OR ([ChineseDescription] = @Original_ChineseDescription)) AND ((@IsNull_ArabicDescription = 1 AND [ArabicDescription] IS NULL) OR ([ArabicDescription] = @Original_ArabicDescription)) AND ((@IsNull_HebrewDescription = 1 AND [HebrewDescription] IS NULL) OR ([HebrewDescription] = @Original_HebrewDescription)) AND ((@IsNull_ThaiDescription = 1 AND [ThaiDescription] IS NULL) OR ([ThaiDescription] = @Original_ThaiDescription)) AND ((@IsNull_GermanDescription = 1 AND [GermanDescription] IS NULL) OR ([GermanDescription] = @Original_GermanDescription)) AND ((@IsNull_JapaneseDescription = 1 AND [JapaneseDescription] IS NULL) OR ([JapaneseDescription] = @Original_JapaneseDescription)) AND ((@IsNull_TurkishDescription = 1 AND [TurkishDescription] IS NULL) OR ([TurkishDescription] = @Original_TurkishDescription)) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ((@IsNull_Status = 1 AND [Status] IS NULL) OR ([Status] = @Original_Status)));
+SELECT ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode, SizeUnitMeasureCode, EnglishProductName, SpanishProductName, FrenchProductName, StandardCost, FinishedGoodsFlag, Color, SafetyStockLevel, ReorderPoint, ListPrice, Size, SizeRange, Weight, DaysToManufacture, ProductLine, DealerPrice, Class, Style, ModelName, LargePhoto, EnglishDescription, FrenchDescription, ChineseDescription, ArabicDescription, HebrewDescription, ThaiDescription, GermanDescription, JapaneseDescription, TurkishDescription, StartDate, EndDate, Status FROM DimProduct WHERE (ProductKey = @ProductKey)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ProductAlternateKey" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProductAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@WeightUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="WeightUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@SizeUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="SizeUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SpanishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@StandardCost" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="StandardCost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@FinishedGoodsFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="FinishedGoodsFlag" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Color" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@SafetyStockLevel" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="SafetyStockLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@ReorderPoint" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="ReorderPoint" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@ListPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ListPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Size" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SizeRange" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SizeRange" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Weight" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@DaysToManufacture" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysToManufacture" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@ProductLine" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ProductLine" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@DealerPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DealerPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Class" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Class" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Style" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Style" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ModelName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModelName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@LargePhoto" Precision="0" ProviderType="VarBinary" Scale="0" Size="0" SourceColumn="LargePhoto" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ChineseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChineseDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ArabicDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArabicDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HebrewDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HebrewDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ThaiDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ThaiDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GermanDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GermanDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@JapaneseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="JapaneseDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@TurkishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TurkishDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ProductAlternateKey" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProductAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_WeightUnitMeasureCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="WeightUnitMeasureCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_WeightUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="WeightUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SizeUnitMeasureCode" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SizeUnitMeasureCode" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_SizeUnitMeasureCode" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="SizeUnitMeasureCode" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SpanishProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchProductName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StandardCost" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StandardCost" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_StandardCost" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="StandardCost" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_FinishedGoodsFlag" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="FinishedGoodsFlag" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Color" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SafetyStockLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SafetyStockLevel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_SafetyStockLevel" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="SafetyStockLevel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderPoint" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderPoint" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="@Original_ReorderPoint" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="ReorderPoint" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ListPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ListPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_ListPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="ListPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Size" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Size" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SizeRange" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SizeRange" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SizeRange" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SizeRange" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Weight" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@Original_Weight" Precision="0" ProviderType="Float" Scale="0" Size="0" SourceColumn="Weight" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DaysToManufacture" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysToManufacture" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_DaysToManufacture" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DaysToManufacture" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductLine" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductLine" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_ProductLine" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="ProductLine" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DealerPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DealerPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_DealerPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DealerPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Class" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Class" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Class" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Class" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Style" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Style" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_Style" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="Style" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModelName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModelName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ModelName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ModelName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EnglishDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EnglishDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FrenchDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FrenchDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ChineseDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ChineseDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ChineseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ChineseDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ArabicDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ArabicDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ArabicDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ArabicDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HebrewDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HebrewDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HebrewDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HebrewDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ThaiDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ThaiDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ThaiDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ThaiDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GermanDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GermanDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GermanDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GermanDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_JapaneseDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="JapaneseDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_JapaneseDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="JapaneseDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TurkishDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TurkishDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_TurkishDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="TurkishDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StartDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EndDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Status" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProductKey" ColumnName="ProductKey" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProductKey" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProductKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProductKey" DataSetColumn="ProductKey" />
+              <Mapping SourceColumn="ProductAlternateKey" DataSetColumn="ProductAlternateKey" />
+              <Mapping SourceColumn="ProductSubcategoryKey" DataSetColumn="ProductSubcategoryKey" />
+              <Mapping SourceColumn="WeightUnitMeasureCode" DataSetColumn="WeightUnitMeasureCode" />
+              <Mapping SourceColumn="SizeUnitMeasureCode" DataSetColumn="SizeUnitMeasureCode" />
+              <Mapping SourceColumn="EnglishProductName" DataSetColumn="EnglishProductName" />
+              <Mapping SourceColumn="SpanishProductName" DataSetColumn="SpanishProductName" />
+              <Mapping SourceColumn="FrenchProductName" DataSetColumn="FrenchProductName" />
+              <Mapping SourceColumn="StandardCost" DataSetColumn="StandardCost" />
+              <Mapping SourceColumn="FinishedGoodsFlag" DataSetColumn="FinishedGoodsFlag" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+              <Mapping SourceColumn="SafetyStockLevel" DataSetColumn="SafetyStockLevel" />
+              <Mapping SourceColumn="ReorderPoint" DataSetColumn="ReorderPoint" />
+              <Mapping SourceColumn="ListPrice" DataSetColumn="ListPrice" />
+              <Mapping SourceColumn="Size" DataSetColumn="Size" />
+              <Mapping SourceColumn="SizeRange" DataSetColumn="SizeRange" />
+              <Mapping SourceColumn="Weight" DataSetColumn="Weight" />
+              <Mapping SourceColumn="DaysToManufacture" DataSetColumn="DaysToManufacture" />
+              <Mapping SourceColumn="ProductLine" DataSetColumn="ProductLine" />
+              <Mapping SourceColumn="DealerPrice" DataSetColumn="DealerPrice" />
+              <Mapping SourceColumn="Class" DataSetColumn="Class" />
+              <Mapping SourceColumn="Style" DataSetColumn="Style" />
+              <Mapping SourceColumn="ModelName" DataSetColumn="ModelName" />
+              <Mapping SourceColumn="LargePhoto" DataSetColumn="LargePhoto" />
+              <Mapping SourceColumn="EnglishDescription" DataSetColumn="EnglishDescription" />
+              <Mapping SourceColumn="FrenchDescription" DataSetColumn="FrenchDescription" />
+              <Mapping SourceColumn="ChineseDescription" DataSetColumn="ChineseDescription" />
+              <Mapping SourceColumn="ArabicDescription" DataSetColumn="ArabicDescription" />
+              <Mapping SourceColumn="HebrewDescription" DataSetColumn="HebrewDescription" />
+              <Mapping SourceColumn="ThaiDescription" DataSetColumn="ThaiDescription" />
+              <Mapping SourceColumn="GermanDescription" DataSetColumn="GermanDescription" />
+              <Mapping SourceColumn="JapaneseDescription" DataSetColumn="JapaneseDescription" />
+              <Mapping SourceColumn="TurkishDescription" DataSetColumn="TurkishDescription" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DimProductCategoryTableAdapter" GeneratorDataComponentClassName="DimProductCategoryTableAdapter" Name="DimProductCategory" UserDataComponentName="DimProductCategoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AdventureWorksDW2019ConnectionString (Settings)" DbObjectName="AdventureWorksDW2019.dbo.DimProductCategory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[DimProductCategory] WHERE (([ProductCategoryKey] = @Original_ProductCategoryKey) AND ((@IsNull_ProductCategoryAlternateKey = 1 AND [ProductCategoryAlternateKey] IS NULL) OR ([ProductCategoryAlternateKey] = @Original_ProductCategoryAlternateKey)) AND ([EnglishProductCategoryName] = @Original_EnglishProductCategoryName) AND ([SpanishProductCategoryName] = @Original_SpanishProductCategoryName) AND ([FrenchProductCategoryName] = @Original_FrenchProductCategoryName))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductCategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductCategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SpanishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[DimProductCategory] ([ProductCategoryAlternateKey], [EnglishProductCategoryName], [SpanishProductCategoryName], [FrenchProductCategoryName]) VALUES (@ProductCategoryAlternateKey, @EnglishProductCategoryName, @SpanishProductCategoryName, @FrenchProductCategoryName);
+SELECT ProductCategoryKey, ProductCategoryAlternateKey, EnglishProductCategoryName, SpanishProductCategoryName, FrenchProductCategoryName FROM DimProductCategory WHERE (ProductCategoryKey = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductCategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SpanishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ProductCategoryKey, ProductCategoryAlternateKey, EnglishProductCategoryName, SpanishProductCategoryName, FrenchProductCategoryName FROM dbo.DimProductCategory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[DimProductCategory] SET [ProductCategoryAlternateKey] = @ProductCategoryAlternateKey, [EnglishProductCategoryName] = @EnglishProductCategoryName, [SpanishProductCategoryName] = @SpanishProductCategoryName, [FrenchProductCategoryName] = @FrenchProductCategoryName WHERE (([ProductCategoryKey] = @Original_ProductCategoryKey) AND ((@IsNull_ProductCategoryAlternateKey = 1 AND [ProductCategoryAlternateKey] IS NULL) OR ([ProductCategoryAlternateKey] = @Original_ProductCategoryAlternateKey)) AND ([EnglishProductCategoryName] = @Original_EnglishProductCategoryName) AND ([SpanishProductCategoryName] = @Original_SpanishProductCategoryName) AND ([FrenchProductCategoryName] = @Original_FrenchProductCategoryName));
+SELECT ProductCategoryKey, ProductCategoryAlternateKey, EnglishProductCategoryName, SpanishProductCategoryName, FrenchProductCategoryName FROM DimProductCategory WHERE (ProductCategoryKey = @ProductCategoryKey)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductCategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SpanishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductCategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductCategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SpanishProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchProductCategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductCategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProductCategoryKey" ColumnName="ProductCategoryKey" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProductCategoryKey" DataSetColumn="ProductCategoryKey" />
+              <Mapping SourceColumn="ProductCategoryAlternateKey" DataSetColumn="ProductCategoryAlternateKey" />
+              <Mapping SourceColumn="EnglishProductCategoryName" DataSetColumn="EnglishProductCategoryName" />
+              <Mapping SourceColumn="SpanishProductCategoryName" DataSetColumn="SpanishProductCategoryName" />
+              <Mapping SourceColumn="FrenchProductCategoryName" DataSetColumn="FrenchProductCategoryName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DimProductSubcategoryTableAdapter" GeneratorDataComponentClassName="DimProductSubcategoryTableAdapter" Name="DimProductSubcategory" UserDataComponentName="DimProductSubcategoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AdventureWorksDW2019ConnectionString (Settings)" DbObjectName="AdventureWorksDW2019.dbo.DimProductSubcategory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[DimProductSubcategory] WHERE (([ProductSubcategoryKey] = @Original_ProductSubcategoryKey) AND ((@IsNull_ProductSubcategoryAlternateKey = 1 AND [ProductSubcategoryAlternateKey] IS NULL) OR ([ProductSubcategoryAlternateKey] = @Original_ProductSubcategoryAlternateKey)) AND ([EnglishProductSubcategoryName] = @Original_EnglishProductSubcategoryName) AND ([SpanishProductSubcategoryName] = @Original_SpanishProductSubcategoryName) AND ([FrenchProductSubcategoryName] = @Original_FrenchProductSubcategoryName) AND ((@IsNull_ProductCategoryKey = 1 AND [ProductCategoryKey] IS NULL) OR ([ProductCategoryKey] = @Original_ProductCategoryKey)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductSubcategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductSubcategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SpanishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[DimProductSubcategory] ([ProductSubcategoryAlternateKey], [EnglishProductSubcategoryName], [SpanishProductSubcategoryName], [FrenchProductSubcategoryName], [ProductCategoryKey]) VALUES (@ProductSubcategoryAlternateKey, @EnglishProductSubcategoryName, @SpanishProductSubcategoryName, @FrenchProductSubcategoryName, @ProductCategoryKey);
+SELECT ProductSubcategoryKey, ProductSubcategoryAlternateKey, EnglishProductSubcategoryName, SpanishProductSubcategoryName, FrenchProductSubcategoryName, ProductCategoryKey FROM DimProductSubcategory WHERE (ProductSubcategoryKey = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductSubcategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SpanishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ProductSubcategoryKey, ProductSubcategoryAlternateKey, EnglishProductSubcategoryName, SpanishProductSubcategoryName, FrenchProductSubcategoryName, ProductCategoryKey FROM dbo.DimProductSubcategory</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[DimProductSubcategory] SET [ProductSubcategoryAlternateKey] = @ProductSubcategoryAlternateKey, [EnglishProductSubcategoryName] = @EnglishProductSubcategoryName, [SpanishProductSubcategoryName] = @SpanishProductSubcategoryName, [FrenchProductSubcategoryName] = @FrenchProductSubcategoryName, [ProductCategoryKey] = @ProductCategoryKey WHERE (([ProductSubcategoryKey] = @Original_ProductSubcategoryKey) AND ((@IsNull_ProductSubcategoryAlternateKey = 1 AND [ProductSubcategoryAlternateKey] IS NULL) OR ([ProductSubcategoryAlternateKey] = @Original_ProductSubcategoryAlternateKey)) AND ([EnglishProductSubcategoryName] = @Original_EnglishProductSubcategoryName) AND ([SpanishProductSubcategoryName] = @Original_SpanishProductSubcategoryName) AND ([FrenchProductSubcategoryName] = @Original_FrenchProductSubcategoryName) AND ((@IsNull_ProductCategoryKey = 1 AND [ProductCategoryKey] IS NULL) OR ([ProductCategoryKey] = @Original_ProductCategoryKey)));
+SELECT ProductSubcategoryKey, ProductSubcategoryAlternateKey, EnglishProductSubcategoryName, SpanishProductSubcategoryName, FrenchProductSubcategoryName, ProductCategoryKey FROM DimProductSubcategory WHERE (ProductSubcategoryKey = @ProductSubcategoryKey)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductSubcategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EnglishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SpanishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FrenchProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductSubcategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductSubcategoryAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductSubcategoryAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_EnglishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EnglishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SpanishProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SpanishProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FrenchProductSubcategoryName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FrenchProductSubcategoryName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ProductCategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProductCategoryKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProductSubcategoryKey" ColumnName="ProductSubcategoryKey" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@ProductSubcategoryKey" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="ProductSubcategoryKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProductSubcategoryKey" DataSetColumn="ProductSubcategoryKey" />
+              <Mapping SourceColumn="ProductSubcategoryAlternateKey" DataSetColumn="ProductSubcategoryAlternateKey" />
+              <Mapping SourceColumn="EnglishProductSubcategoryName" DataSetColumn="EnglishProductSubcategoryName" />
+              <Mapping SourceColumn="SpanishProductSubcategoryName" DataSetColumn="SpanishProductSubcategoryName" />
+              <Mapping SourceColumn="FrenchProductSubcategoryName" DataSetColumn="FrenchProductSubcategoryName" />
+              <Mapping SourceColumn="ProductCategoryKey" DataSetColumn="ProductCategoryKey" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DimAccountTableAdapter" GeneratorDataComponentClassName="DimAccountTableAdapter" Name="DimAccount" UserDataComponentName="DimAccountTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AdventureWorksDW2019ConnectionString (Settings)" DbObjectName="AdventureWorksDW2019.dbo.DimAccount" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[DimAccount] WHERE (([AccountKey] = @Original_AccountKey) AND ((@IsNull_ParentAccountKey = 1 AND [ParentAccountKey] IS NULL) OR ([ParentAccountKey] = @Original_ParentAccountKey)) AND ((@IsNull_AccountCodeAlternateKey = 1 AND [AccountCodeAlternateKey] IS NULL) OR ([AccountCodeAlternateKey] = @Original_AccountCodeAlternateKey)) AND ((@IsNull_ParentAccountCodeAlternateKey = 1 AND [ParentAccountCodeAlternateKey] IS NULL) OR ([ParentAccountCodeAlternateKey] = @Original_ParentAccountCodeAlternateKey)) AND ((@IsNull_AccountDescription = 1 AND [AccountDescription] IS NULL) OR ([AccountDescription] = @Original_AccountDescription)) AND ((@IsNull_AccountType = 1 AND [AccountType] IS NULL) OR ([AccountType] = @Original_AccountType)) AND ((@IsNull_Operator = 1 AND [Operator] IS NULL) OR ([Operator] = @Original_Operator)) AND ((@IsNull_CustomMembers = 1 AND [CustomMembers] IS NULL) OR ([CustomMembers] = @Original_CustomMembers)) AND ((@IsNull_ValueType = 1 AND [ValueType] IS NULL) OR ([ValueType] = @Original_ValueType)) AND ((@IsNull_CustomMemberOptions = 1 AND [CustomMemberOptions] IS NULL) OR ([CustomMemberOptions] = @Original_CustomMemberOptions)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ParentAccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ParentAccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountCodeAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ParentAccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountCodeAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ParentAccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AccountDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AccountType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Operator" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Operator" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Operator" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Operator" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CustomMembers" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CustomMembers" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CustomMembers" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMembers" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValueType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ValueType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CustomMemberOptions" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CustomMemberOptions" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CustomMemberOptions" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMemberOptions" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[DimAccount] ([ParentAccountKey], [AccountCodeAlternateKey], [ParentAccountCodeAlternateKey], [AccountDescription], [AccountType], [Operator], [CustomMembers], [ValueType], [CustomMemberOptions]) VALUES (@ParentAccountKey, @AccountCodeAlternateKey, @ParentAccountCodeAlternateKey, @AccountDescription, @AccountType, @Operator, @CustomMembers, @ValueType, @CustomMemberOptions);
+SELECT AccountKey, ParentAccountKey, AccountCodeAlternateKey, ParentAccountCodeAlternateKey, AccountDescription, AccountType, Operator, CustomMembers, ValueType, CustomMemberOptions FROM DimAccount WHERE (AccountKey = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ParentAccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ParentAccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AccountDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AccountType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Operator" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Operator" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CustomMembers" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMembers" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ValueType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CustomMemberOptions" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMemberOptions" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AccountKey, ParentAccountKey, AccountCodeAlternateKey, ParentAccountCodeAlternateKey, AccountDescription, AccountType, Operator, CustomMembers, ValueType, CustomMemberOptions FROM dbo.DimAccount</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[DimAccount] SET [ParentAccountKey] = @ParentAccountKey, [AccountCodeAlternateKey] = @AccountCodeAlternateKey, [ParentAccountCodeAlternateKey] = @ParentAccountCodeAlternateKey, [AccountDescription] = @AccountDescription, [AccountType] = @AccountType, [Operator] = @Operator, [CustomMembers] = @CustomMembers, [ValueType] = @ValueType, [CustomMemberOptions] = @CustomMemberOptions WHERE (([AccountKey] = @Original_AccountKey) AND ((@IsNull_ParentAccountKey = 1 AND [ParentAccountKey] IS NULL) OR ([ParentAccountKey] = @Original_ParentAccountKey)) AND ((@IsNull_AccountCodeAlternateKey = 1 AND [AccountCodeAlternateKey] IS NULL) OR ([AccountCodeAlternateKey] = @Original_AccountCodeAlternateKey)) AND ((@IsNull_ParentAccountCodeAlternateKey = 1 AND [ParentAccountCodeAlternateKey] IS NULL) OR ([ParentAccountCodeAlternateKey] = @Original_ParentAccountCodeAlternateKey)) AND ((@IsNull_AccountDescription = 1 AND [AccountDescription] IS NULL) OR ([AccountDescription] = @Original_AccountDescription)) AND ((@IsNull_AccountType = 1 AND [AccountType] IS NULL) OR ([AccountType] = @Original_AccountType)) AND ((@IsNull_Operator = 1 AND [Operator] IS NULL) OR ([Operator] = @Original_Operator)) AND ((@IsNull_CustomMembers = 1 AND [CustomMembers] IS NULL) OR ([CustomMembers] = @Original_CustomMembers)) AND ((@IsNull_ValueType = 1 AND [ValueType] IS NULL) OR ([ValueType] = @Original_ValueType)) AND ((@IsNull_CustomMemberOptions = 1 AND [CustomMemberOptions] IS NULL) OR ([CustomMemberOptions] = @Original_CustomMemberOptions)));
+SELECT AccountKey, ParentAccountKey, AccountCodeAlternateKey, ParentAccountCodeAlternateKey, AccountDescription, AccountType, Operator, CustomMembers, ValueType, CustomMemberOptions FROM DimAccount WHERE (AccountKey = @AccountKey)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ParentAccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@ParentAccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AccountDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AccountType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Operator" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Operator" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CustomMembers" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMembers" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ValueType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CustomMemberOptions" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMemberOptions" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ParentAccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ParentAccountKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountCodeAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ParentAccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountCodeAlternateKey" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_ParentAccountCodeAlternateKey" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ParentAccountCodeAlternateKey" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AccountDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccountType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccountType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_AccountType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AccountType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Operator" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Operator" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Operator" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Operator" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CustomMembers" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CustomMembers" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CustomMembers" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMembers" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ValueType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ValueType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ValueType" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ValueType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CustomMemberOptions" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CustomMemberOptions" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CustomMemberOptions" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CustomMemberOptions" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="AccountKey" ColumnName="AccountKey" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@AccountKey" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="AccountKey" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AccountKey" DataSetColumn="AccountKey" />
+              <Mapping SourceColumn="ParentAccountKey" DataSetColumn="ParentAccountKey" />
+              <Mapping SourceColumn="AccountCodeAlternateKey" DataSetColumn="AccountCodeAlternateKey" />
+              <Mapping SourceColumn="ParentAccountCodeAlternateKey" DataSetColumn="ParentAccountCodeAlternateKey" />
+              <Mapping SourceColumn="AccountDescription" DataSetColumn="AccountDescription" />
+              <Mapping SourceColumn="AccountType" DataSetColumn="AccountType" />
+              <Mapping SourceColumn="Operator" DataSetColumn="Operator" />
+              <Mapping SourceColumn="CustomMembers" DataSetColumn="CustomMembers" />
+              <Mapping SourceColumn="ValueType" DataSetColumn="ValueType" />
+              <Mapping SourceColumn="CustomMemberOptions" DataSetColumn="CustomMemberOptions" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdventureStoreDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AdventureStoreDataSet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AdventureStoreDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DimProduct" msprop:Generator_RowClassName="DimProductRow" msprop:Generator_RowEvHandlerName="DimProductRowChangeEventHandler" msprop:Generator_RowDeletedName="DimProductRowDeleted" msprop:Generator_RowDeletingName="DimProductRowDeleting" msprop:Generator_RowEvArgName="DimProductRowChangeEvent" msprop:Generator_TablePropName="DimProduct" msprop:Generator_RowChangedName="DimProductRowChanged" msprop:Generator_UserTableName="DimProduct" msprop:Generator_RowChangingName="DimProductRowChanging" msprop:Generator_TableClassName="DimProductDataTable" msprop:Generator_TableVarName="tableDimProduct">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ProductKey" msprop:Generator_ColumnPropNameInTable="ProductKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductKey" msprop:Generator_ColumnVarNameInTable="columnProductKey" type="xs:int" />
+              <xs:element name="ProductAlternateKey" msprop:Generator_UserColumnName="ProductAlternateKey" msprop:Generator_ColumnPropNameInTable="ProductAlternateKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductAlternateKey" msprop:Generator_ColumnVarNameInTable="columnProductAlternateKey" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductSubcategoryKey" msprop:Generator_UserColumnName="ProductSubcategoryKey" msprop:Generator_ColumnPropNameInTable="ProductSubcategoryKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductSubcategoryKey" msprop:Generator_ColumnVarNameInTable="columnProductSubcategoryKey" type="xs:int" minOccurs="0" />
+              <xs:element name="WeightUnitMeasureCode" msprop:Generator_UserColumnName="WeightUnitMeasureCode" msprop:Generator_ColumnPropNameInTable="WeightUnitMeasureCodeColumn" msprop:Generator_ColumnPropNameInRow="WeightUnitMeasureCode" msprop:Generator_ColumnVarNameInTable="columnWeightUnitMeasureCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SizeUnitMeasureCode" msprop:Generator_UserColumnName="SizeUnitMeasureCode" msprop:Generator_ColumnPropNameInTable="SizeUnitMeasureCodeColumn" msprop:Generator_ColumnPropNameInRow="SizeUnitMeasureCode" msprop:Generator_ColumnVarNameInTable="columnSizeUnitMeasureCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EnglishProductName" msprop:Generator_UserColumnName="EnglishProductName" msprop:Generator_ColumnPropNameInTable="EnglishProductNameColumn" msprop:Generator_ColumnPropNameInRow="EnglishProductName" msprop:Generator_ColumnVarNameInTable="columnEnglishProductName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpanishProductName" msprop:Generator_UserColumnName="SpanishProductName" msprop:Generator_ColumnPropNameInTable="SpanishProductNameColumn" msprop:Generator_ColumnPropNameInRow="SpanishProductName" msprop:Generator_ColumnVarNameInTable="columnSpanishProductName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FrenchProductName" msprop:Generator_UserColumnName="FrenchProductName" msprop:Generator_ColumnPropNameInTable="FrenchProductNameColumn" msprop:Generator_ColumnPropNameInRow="FrenchProductName" msprop:Generator_ColumnVarNameInTable="columnFrenchProductName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StandardCost" msprop:Generator_UserColumnName="StandardCost" msprop:Generator_ColumnPropNameInTable="StandardCostColumn" msprop:Generator_ColumnPropNameInRow="StandardCost" msprop:Generator_ColumnVarNameInTable="columnStandardCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinishedGoodsFlag" msprop:Generator_UserColumnName="FinishedGoodsFlag" msprop:Generator_ColumnPropNameInTable="FinishedGoodsFlagColumn" msprop:Generator_ColumnPropNameInRow="FinishedGoodsFlag" msprop:Generator_ColumnVarNameInTable="columnFinishedGoodsFlag" type="xs:boolean" />
+              <xs:element name="Color" msprop:Generator_UserColumnName="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnVarNameInTable="columnColor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SafetyStockLevel" msprop:Generator_UserColumnName="SafetyStockLevel" msprop:Generator_ColumnPropNameInTable="SafetyStockLevelColumn" msprop:Generator_ColumnPropNameInRow="SafetyStockLevel" msprop:Generator_ColumnVarNameInTable="columnSafetyStockLevel" type="xs:short" minOccurs="0" />
+              <xs:element name="ReorderPoint" msprop:Generator_UserColumnName="ReorderPoint" msprop:Generator_ColumnPropNameInTable="ReorderPointColumn" msprop:Generator_ColumnPropNameInRow="ReorderPoint" msprop:Generator_ColumnVarNameInTable="columnReorderPoint" type="xs:short" minOccurs="0" />
+              <xs:element name="ListPrice" msprop:Generator_UserColumnName="ListPrice" msprop:Generator_ColumnPropNameInTable="ListPriceColumn" msprop:Generator_ColumnPropNameInRow="ListPrice" msprop:Generator_ColumnVarNameInTable="columnListPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Size" msprop:Generator_UserColumnName="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnVarNameInTable="columnSize" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SizeRange" msprop:Generator_UserColumnName="SizeRange" msprop:Generator_ColumnPropNameInTable="SizeRangeColumn" msprop:Generator_ColumnPropNameInRow="SizeRange" msprop:Generator_ColumnVarNameInTable="columnSizeRange" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Weight" msprop:Generator_UserColumnName="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" type="xs:double" minOccurs="0" />
+              <xs:element name="DaysToManufacture" msprop:Generator_UserColumnName="DaysToManufacture" msprop:Generator_ColumnPropNameInTable="DaysToManufactureColumn" msprop:Generator_ColumnPropNameInRow="DaysToManufacture" msprop:Generator_ColumnVarNameInTable="columnDaysToManufacture" type="xs:int" minOccurs="0" />
+              <xs:element name="ProductLine" msprop:Generator_UserColumnName="ProductLine" msprop:Generator_ColumnPropNameInTable="ProductLineColumn" msprop:Generator_ColumnPropNameInRow="ProductLine" msprop:Generator_ColumnVarNameInTable="columnProductLine" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DealerPrice" msprop:Generator_UserColumnName="DealerPrice" msprop:Generator_ColumnPropNameInTable="DealerPriceColumn" msprop:Generator_ColumnPropNameInRow="DealerPrice" msprop:Generator_ColumnVarNameInTable="columnDealerPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Class" msprop:Generator_UserColumnName="Class" msprop:Generator_ColumnPropNameInTable="ClassColumn" msprop:Generator_ColumnPropNameInRow="Class" msprop:Generator_ColumnVarNameInTable="columnClass" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Style" msprop:Generator_UserColumnName="Style" msprop:Generator_ColumnPropNameInTable="StyleColumn" msprop:Generator_ColumnPropNameInRow="Style" msprop:Generator_ColumnVarNameInTable="columnStyle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModelName" msprop:Generator_UserColumnName="ModelName" msprop:Generator_ColumnPropNameInTable="ModelNameColumn" msprop:Generator_ColumnPropNameInRow="ModelName" msprop:Generator_ColumnVarNameInTable="columnModelName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LargePhoto" msprop:Generator_UserColumnName="LargePhoto" msprop:Generator_ColumnPropNameInTable="LargePhotoColumn" msprop:Generator_ColumnPropNameInRow="LargePhoto" msprop:Generator_ColumnVarNameInTable="columnLargePhoto" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="EnglishDescription" msprop:Generator_UserColumnName="EnglishDescription" msprop:Generator_ColumnPropNameInTable="EnglishDescriptionColumn" msprop:Generator_ColumnPropNameInRow="EnglishDescription" msprop:Generator_ColumnVarNameInTable="columnEnglishDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FrenchDescription" msprop:Generator_UserColumnName="FrenchDescription" msprop:Generator_ColumnPropNameInTable="FrenchDescriptionColumn" msprop:Generator_ColumnPropNameInRow="FrenchDescription" msprop:Generator_ColumnVarNameInTable="columnFrenchDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChineseDescription" msprop:Generator_UserColumnName="ChineseDescription" msprop:Generator_ColumnPropNameInTable="ChineseDescriptionColumn" msprop:Generator_ColumnPropNameInRow="ChineseDescription" msprop:Generator_ColumnVarNameInTable="columnChineseDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArabicDescription" msprop:Generator_UserColumnName="ArabicDescription" msprop:Generator_ColumnPropNameInTable="ArabicDescriptionColumn" msprop:Generator_ColumnPropNameInRow="ArabicDescription" msprop:Generator_ColumnVarNameInTable="columnArabicDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HebrewDescription" msprop:Generator_UserColumnName="HebrewDescription" msprop:Generator_ColumnPropNameInTable="HebrewDescriptionColumn" msprop:Generator_ColumnPropNameInRow="HebrewDescription" msprop:Generator_ColumnVarNameInTable="columnHebrewDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ThaiDescription" msprop:Generator_UserColumnName="ThaiDescription" msprop:Generator_ColumnPropNameInTable="ThaiDescriptionColumn" msprop:Generator_ColumnPropNameInRow="ThaiDescription" msprop:Generator_ColumnVarNameInTable="columnThaiDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GermanDescription" msprop:Generator_UserColumnName="GermanDescription" msprop:Generator_ColumnPropNameInTable="GermanDescriptionColumn" msprop:Generator_ColumnPropNameInRow="GermanDescription" msprop:Generator_ColumnVarNameInTable="columnGermanDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JapaneseDescription" msprop:Generator_UserColumnName="JapaneseDescription" msprop:Generator_ColumnPropNameInTable="JapaneseDescriptionColumn" msprop:Generator_ColumnPropNameInRow="JapaneseDescription" msprop:Generator_ColumnVarNameInTable="columnJapaneseDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TurkishDescription" msprop:Generator_UserColumnName="TurkishDescription" msprop:Generator_ColumnPropNameInTable="TurkishDescriptionColumn" msprop:Generator_ColumnPropNameInRow="TurkishDescription" msprop:Generator_ColumnVarNameInTable="columnTurkishDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StartDate" msprop:Generator_UserColumnName="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_UserColumnName="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DimProductCategory" msprop:Generator_RowClassName="DimProductCategoryRow" msprop:Generator_RowEvHandlerName="DimProductCategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="DimProductCategoryRowDeleted" msprop:Generator_RowDeletingName="DimProductCategoryRowDeleting" msprop:Generator_RowEvArgName="DimProductCategoryRowChangeEvent" msprop:Generator_TablePropName="DimProductCategory" msprop:Generator_RowChangedName="DimProductCategoryRowChanged" msprop:Generator_UserTableName="DimProductCategory" msprop:Generator_RowChangingName="DimProductCategoryRowChanging" msprop:Generator_TableClassName="DimProductCategoryDataTable" msprop:Generator_TableVarName="tableDimProductCategory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductCategoryKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ProductCategoryKey" msprop:Generator_ColumnPropNameInTable="ProductCategoryKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductCategoryKey" msprop:Generator_ColumnVarNameInTable="columnProductCategoryKey" type="xs:int" />
+              <xs:element name="ProductCategoryAlternateKey" msprop:Generator_UserColumnName="ProductCategoryAlternateKey" msprop:Generator_ColumnPropNameInTable="ProductCategoryAlternateKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductCategoryAlternateKey" msprop:Generator_ColumnVarNameInTable="columnProductCategoryAlternateKey" type="xs:int" minOccurs="0" />
+              <xs:element name="EnglishProductCategoryName" msprop:Generator_UserColumnName="EnglishProductCategoryName" msprop:Generator_ColumnPropNameInTable="EnglishProductCategoryNameColumn" msprop:Generator_ColumnPropNameInRow="EnglishProductCategoryName" msprop:Generator_ColumnVarNameInTable="columnEnglishProductCategoryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpanishProductCategoryName" msprop:Generator_UserColumnName="SpanishProductCategoryName" msprop:Generator_ColumnPropNameInTable="SpanishProductCategoryNameColumn" msprop:Generator_ColumnPropNameInRow="SpanishProductCategoryName" msprop:Generator_ColumnVarNameInTable="columnSpanishProductCategoryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FrenchProductCategoryName" msprop:Generator_UserColumnName="FrenchProductCategoryName" msprop:Generator_ColumnPropNameInTable="FrenchProductCategoryNameColumn" msprop:Generator_ColumnPropNameInRow="FrenchProductCategoryName" msprop:Generator_ColumnVarNameInTable="columnFrenchProductCategoryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DimProductSubcategory" msprop:Generator_RowClassName="DimProductSubcategoryRow" msprop:Generator_RowEvHandlerName="DimProductSubcategoryRowChangeEventHandler" msprop:Generator_RowDeletedName="DimProductSubcategoryRowDeleted" msprop:Generator_RowDeletingName="DimProductSubcategoryRowDeleting" msprop:Generator_RowEvArgName="DimProductSubcategoryRowChangeEvent" msprop:Generator_TablePropName="DimProductSubcategory" msprop:Generator_RowChangedName="DimProductSubcategoryRowChanged" msprop:Generator_UserTableName="DimProductSubcategory" msprop:Generator_RowChangingName="DimProductSubcategoryRowChanging" msprop:Generator_TableClassName="DimProductSubcategoryDataTable" msprop:Generator_TableVarName="tableDimProductSubcategory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductSubcategoryKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ProductSubcategoryKey" msprop:Generator_ColumnPropNameInTable="ProductSubcategoryKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductSubcategoryKey" msprop:Generator_ColumnVarNameInTable="columnProductSubcategoryKey" type="xs:int" />
+              <xs:element name="ProductSubcategoryAlternateKey" msprop:Generator_UserColumnName="ProductSubcategoryAlternateKey" msprop:Generator_ColumnPropNameInTable="ProductSubcategoryAlternateKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductSubcategoryAlternateKey" msprop:Generator_ColumnVarNameInTable="columnProductSubcategoryAlternateKey" type="xs:int" minOccurs="0" />
+              <xs:element name="EnglishProductSubcategoryName" msprop:Generator_UserColumnName="EnglishProductSubcategoryName" msprop:Generator_ColumnPropNameInTable="EnglishProductSubcategoryNameColumn" msprop:Generator_ColumnPropNameInRow="EnglishProductSubcategoryName" msprop:Generator_ColumnVarNameInTable="columnEnglishProductSubcategoryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SpanishProductSubcategoryName" msprop:Generator_UserColumnName="SpanishProductSubcategoryName" msprop:Generator_ColumnPropNameInTable="SpanishProductSubcategoryNameColumn" msprop:Generator_ColumnPropNameInRow="SpanishProductSubcategoryName" msprop:Generator_ColumnVarNameInTable="columnSpanishProductSubcategoryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FrenchProductSubcategoryName" msprop:Generator_UserColumnName="FrenchProductSubcategoryName" msprop:Generator_ColumnPropNameInTable="FrenchProductSubcategoryNameColumn" msprop:Generator_ColumnPropNameInRow="FrenchProductSubcategoryName" msprop:Generator_ColumnVarNameInTable="columnFrenchProductSubcategoryName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProductCategoryKey" msprop:Generator_UserColumnName="ProductCategoryKey" msprop:Generator_ColumnPropNameInTable="ProductCategoryKeyColumn" msprop:Generator_ColumnPropNameInRow="ProductCategoryKey" msprop:Generator_ColumnVarNameInTable="columnProductCategoryKey" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DimAccount" msprop:Generator_RowEvHandlerName="DimAccountRowChangeEventHandler" msprop:Generator_RowDeletedName="DimAccountRowDeleted" msprop:Generator_RowDeletingName="DimAccountRowDeleting" msprop:Generator_RowEvArgName="DimAccountRowChangeEvent" msprop:Generator_TablePropName="DimAccount" msprop:Generator_RowChangedName="DimAccountRowChanged" msprop:Generator_RowChangingName="DimAccountRowChanging" msprop:Generator_TableClassName="DimAccountDataTable" msprop:Generator_RowClassName="DimAccountRow" msprop:Generator_TableVarName="tableDimAccount" msprop:Generator_UserTableName="DimAccount">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AccountKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="AccountKey" msprop:Generator_ColumnPropNameInTable="AccountKeyColumn" msprop:Generator_ColumnVarNameInTable="columnAccountKey" msprop:Generator_UserColumnName="AccountKey" type="xs:int" />
+              <xs:element name="ParentAccountKey" msprop:Generator_ColumnPropNameInRow="ParentAccountKey" msprop:Generator_ColumnPropNameInTable="ParentAccountKeyColumn" msprop:Generator_ColumnVarNameInTable="columnParentAccountKey" msprop:Generator_UserColumnName="ParentAccountKey" type="xs:int" minOccurs="0" />
+              <xs:element name="AccountCodeAlternateKey" msprop:Generator_ColumnPropNameInRow="AccountCodeAlternateKey" msprop:Generator_ColumnPropNameInTable="AccountCodeAlternateKeyColumn" msprop:Generator_ColumnVarNameInTable="columnAccountCodeAlternateKey" msprop:Generator_UserColumnName="AccountCodeAlternateKey" type="xs:int" minOccurs="0" />
+              <xs:element name="ParentAccountCodeAlternateKey" msprop:Generator_ColumnPropNameInRow="ParentAccountCodeAlternateKey" msprop:Generator_ColumnPropNameInTable="ParentAccountCodeAlternateKeyColumn" msprop:Generator_ColumnVarNameInTable="columnParentAccountCodeAlternateKey" msprop:Generator_UserColumnName="ParentAccountCodeAlternateKey" type="xs:int" minOccurs="0" />
+              <xs:element name="AccountDescription" msprop:Generator_ColumnPropNameInRow="AccountDescription" msprop:Generator_ColumnPropNameInTable="AccountDescriptionColumn" msprop:Generator_ColumnVarNameInTable="columnAccountDescription" msprop:Generator_UserColumnName="AccountDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccountType" msprop:Generator_ColumnPropNameInRow="AccountType" msprop:Generator_ColumnPropNameInTable="AccountTypeColumn" msprop:Generator_ColumnVarNameInTable="columnAccountType" msprop:Generator_UserColumnName="AccountType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Operator" msprop:Generator_ColumnPropNameInRow="Operator" msprop:Generator_ColumnPropNameInTable="OperatorColumn" msprop:Generator_ColumnVarNameInTable="columnOperator" msprop:Generator_UserColumnName="Operator" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomMembers" msprop:Generator_ColumnPropNameInRow="CustomMembers" msprop:Generator_ColumnPropNameInTable="CustomMembersColumn" msprop:Generator_ColumnVarNameInTable="columnCustomMembers" msprop:Generator_UserColumnName="CustomMembers" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValueType" msprop:Generator_ColumnPropNameInRow="ValueType" msprop:Generator_ColumnPropNameInTable="ValueTypeColumn" msprop:Generator_ColumnVarNameInTable="columnValueType" msprop:Generator_UserColumnName="ValueType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomMemberOptions" msprop:Generator_ColumnPropNameInRow="CustomMemberOptions" msprop:Generator_ColumnPropNameInTable="CustomMemberOptionsColumn" msprop:Generator_ColumnVarNameInTable="columnCustomMemberOptions" msprop:Generator_UserColumnName="CustomMemberOptions" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DimProduct" />
+      <xs:field xpath="mstns:ProductKey" />
+    </xs:unique>
+    <xs:unique name="DimProductCategory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DimProductCategory" />
+      <xs:field xpath="mstns:ProductCategoryKey" />
+    </xs:unique>
+    <xs:unique name="DimProductSubcategory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DimProductSubcategory" />
+      <xs:field xpath="mstns:ProductSubcategoryKey" />
+    </xs:unique>
+    <xs:unique name="DimAccount_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DimAccount" />
+      <xs:field xpath="mstns:AccountKey" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_DimProduct_DimProductSubcategory" msdata:parent="DimProductSubcategory" msdata:child="DimProduct" msdata:parentkey="ProductSubcategoryKey" msdata:childkey="ProductSubcategoryKey" msprop:Generator_UserParentTable="DimProductSubcategory" msprop:Generator_UserChildTable="DimProduct" msprop:Generator_RelationVarName="relationFK_DimProduct_DimProductSubcategory" msprop:Generator_ChildPropName="GetDimProductRows" msprop:Generator_ParentPropName="DimProductSubcategoryRow" msprop:Generator_UserRelationName="FK_DimProduct_DimProductSubcategory" />
+      <msdata:Relationship name="FK_DimProductSubcategory_DimProductCategory" msdata:parent="DimProductCategory" msdata:child="DimProductSubcategory" msdata:parentkey="ProductCategoryKey" msdata:childkey="ProductCategoryKey" msprop:Generator_UserParentTable="DimProductCategory" msprop:Generator_UserChildTable="DimProductSubcategory" msprop:Generator_RelationVarName="relationFK_DimProductSubcategory_DimProductCategory" msprop:Generator_ChildPropName="GetDimProductSubcategoryRows" msprop:Generator_UserRelationName="FK_DimProductSubcategory_DimProductCategory" msprop:Generator_ParentPropName="DimProductCategoryRow" />
+      <msdata:Relationship name="FK_DimAccount_DimAccount" msdata:parent="DimAccount" msdata:child="DimAccount" msdata:parentkey="AccountKey" msdata:childkey="ParentAccountKey" msprop:Generator_ChildPropName="GetDimAccountRows" msprop:Generator_UserChildTable="DimAccount" msprop:Generator_RelationVarName="relationFK_DimAccount_DimAccount" msprop:Generator_UserRelationName="FK_DimAccount_DimAccount" msprop:Generator_UserParentTable="DimAccount" msprop:Generator_ParentPropName="DimAccountRowParent" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
